@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HuYu | Stream TV and Movies Live and Online</title>
+    <link rel="stylesheet" href="./Home2.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+      <!-- bootstrap links -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rancho&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/4e948b40f1.js" crossorigin="anonymous"></script>
+    <!-- bootstrap links -->
+</head>
+<body>
+    <div class="all-content">
+        <!-- navbar start -->
+    
+    
+        <nav class="navbar navbar-expand-lg" id="navbar">
+          <div class="container-fluid">
+            <a class="navbar-brand" href="#" id="logo"><img src="./img/huyu3.png" alt=""></a>
+                
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+              aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span><i class="fa-solid fa-bars" style="color: white; font-size: 23px;"></i></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#tvshows">TV Shows</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#movies">Movies</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#my-list">My List</a>
+                </li>
+                <!-- FOR DROPDOWN MOVIES -->
+                <li class="nav-item dropdown">
+                  <a
+                      class="nav-link dropdown-toggle"
+                      href="#"
+                      role="button"
+                      data-bs-toggle="dropdown"
+                      aria-expanded="false"
+                  >
+                      Categories
+                  </a>
+                  <ul class="dropdown-menu">
+                      <!-- FOR DROPDOWN CATEGORIES -->
+                      <div class="dropdown" onclick="myFunction()">
+                          <div class="dropdown-content">
+                              <div id="tags">
+                              </di>
+                          </div>
+                      </div>
+                  </ul>
+                </li>
+                    
+              </ul>
+              <form class="d-flex" id="form">
+
+                <!-- <i class="search-icon fa-solid fa-magnifying-glass"></i> -->
+                
+                <input class="form-control me-2" type="text" placeholder="Find Movie Titles Here" aria-label="Search" id="search"> 
+                <button class="btn btn-outline-success" type="submit">Search</button>
+              </form>
+            </div>
+          </div>
+        </nav>
+    
+        <!-- navbar end -->
+
+        <div class="featured-content" style="background: linear-gradient(to bottom, rgba(0,0,0,0), #151415), url(./image/BG.jpeg);">
+            <p class="featured-desc">
+                Unlimited movies, TV shows, and more. Watch anywhere. Enjoy anytime. Enjoy on your TV. Watch on Smart TVs, Playstation, Xbox, Chromecast, Apple TV, Blu-ray players, and more.
+            </p>
+            <!-- <button class="watch-btn">
+                <a href="#watchnow">Watch</a>
+                <i class="fa-solid fa-play"></i>
+            </button> -->
+        </div>
+        <!-- END OF FEATURE -->
+        <!--FOR MOVIES SLIDE-->
+        <div id="myNav" class="overlay" >
+            <!-- Button to close the overlay navigation -->
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">
+                &times;
+            </a
+              >
+            <!-- Overlay content -->
+            <div class="overlay-content" id="overlay-content"></div>
+            <a href="javascript:void(0)" class="arrow left-arrow" id="left-arrow">
+                <i class="fas fa-arrow-left">
+                </i
+              >
+            </a>
+            <a href="javascript:void(0)" class="arrow right-arrow" id="right-arrow">
+                <i class="fas fa-arrow-right">
+                </i
+              >
+            </a>
+        </div>
+        <main id="main"></main>
+        <!--END OF MOVIES SLIDE-->
+
+        <footer class="footer">
+            <div class="footer-container">
+              <div class="footer-lists">
+                <ul>
+                  <li class="list-head">BROWSE</li>
+                  <li><a href="#">Streaming Library</a></li>
+                  <li><a href="#">Live TV</a></li>
+                  <li><a href="#">Live News</a></li>
+                  <li><a href="#">Live Sports</a></li>
+                </ul>
+                <ul>
+                  <li><a href="#">TV Shows</a></li>
+                  <li><a href="#">Movies</a></li>
+                  <li><a href="#">Originals</a></li>
+                  <li><a href="#">Networks</a></li>
+                  <li><a href="#">Kids</a></li>
+                  <li><a href="#">FX on HuYu</a></li>
+                </ul>
+                <ul>
+                  <li><a href="#">HuYu, Disney+, and ESPN+</a></li>
+                  <li><a href="#">Disney Bundle</a></li>
+                  <li><a href="#">HBO Max</a></li>
+                  <li><a href="#">Cinimax</a></li>
+                  <li><a href="#">Showtime</a></li>
+                  <li><a href="#">STARZ</a></li>
+                </ul>
+                <ul>
+                  <li class="list-head">HELP</li>
+                  <li><a href="#">Account & Billing</a></li>
+                  <li><a href="#">Plans & Pricing</a></li>
+                  <li><a href="#">Supported Devices</a></li>
+                  <li><a href="#">Accesibility</a></li>
+                </ul>
+                <ul>
+                  <li class="list-head">ABOUT US</li>
+                  <li><a href="#">Press</a></li>
+                  <li><a href="#">Jobs</a></li>
+                  <li><a href="#">Contact</a></li>
+                </ul>
+              </div>
+              <div class="divider"></div>
+      
+              <div class="social-icons">
+                <a href="#"><img src="img/facebook.svg" alt="" /></a>
+                <a href="#"><img src="img/twitter.svg" alt="" /></a>
+                <a href="#"><img src="img/youtube.svg" alt="" /></a>
+                <a href="#"><img src="img/instagram.svg" alt="" /></a>
+              </div>
+            </div>
+          </footer>
+          
+        <script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>    
+        <script src="./scripts.js"></script>
+</body>
+</html>
